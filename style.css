@@ -1,0 +1,103 @@
+/* ================================
+   Border Animation Example
+   ================================ */
+.calender::before {
+    content: '';
+    position:absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255),
+     rgb(255, 48, 255));
+    height: 130%;
+    animation: rot 3s linear infinite;
+    transition: all 0.2s linear;
+}
+.calender::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    inset: 5px;
+    border-radius: 15px;
+}
+@keyframes rot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* ================================
+   Border Animation Example
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.container {
+background-color: #CDD1FC;
+min-height: 100vh;
+width: 100%;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title h2 {
+  font-size: 28px;
+  color: #C54EF6;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.title span {
+    color: #6841B8;
+}
+#date {
+    font-size: 50px;
+    color: #8089FE;
+}
+p {
+    font-weight: 500;
+}
+.calender {
+    background: #fff;
+    width: 300px;
+    height: 250px;
+    display:flex;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.left, .right {
+    flex-direction: column;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 1;
+}
+.right {
+    width: 42%;
+    background: #8089FE;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.left {
+    width: 58%;
+}
+.right p {
+    font-size: 25px;
+}
